@@ -25,9 +25,9 @@ button {background-color: transparent; border: 0;}
 .eng {font-family: 'Nunito', sans-serif;}
 .tit {font-family: 'Yeon Sung', cursive;}
 .wrap {width: 60%; height: 100%; margin: 0 auto;}
-.title {border-left: 1px solid #222; padding-left: 3%; margin-left: 12%; margin-bottom: 6%;}
-.title > h1 {font-size: 2.3vw; font-weight: 600; margin-bottom: 2%;}
-.title > p {font-size: 1vw;}
+.fly_right {border-left: 1px solid #222; padding-left: 3%; margin-left: 12%; margin-bottom: 6%;}
+.fly_right > h1 {font-size: 2.3vw; font-weight: 600; margin-bottom: 2%;}
+.fly_right > p {font-size: 1vw;}
 
 /*************** gnb ****************/
 .gnb {width: 96%; margin: 0 auto; position: absolute; z-index: 100;}
@@ -102,7 +102,7 @@ header h1 > span {display: block; margin-bottom: 15%;}
 .sli_txt > div {text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
  
 .sli_txt > div h2 {margin-bottom: 3%;}
-.sli_txt > div a {font-size: 1.2vw; border: 1px solid #fff; padding: 3% 8%;}
+.sli_txt > div a {font-size: 1.2vw; background-color: #fff; padding: 3% 8%;}
 
 
 /*************** about ****************/
@@ -111,7 +111,13 @@ header h1 > span {display: block; margin-bottom: 15%;}
 .ab_top > :first-child {margin-right: 6%;}
 .ab_top h3 {font-size: 1vw; border-bottom: 1px solid #ccc; padding-bottom: 3%;}
 .ab_top h1 {padding: 5% 0 3%;}
-.ab_bott > li {float: left; width: 23%; margin-right: 2%; border: 1px solid #ccc; overflow: hidden;}
-.ab_bott > :last-child {margin-right: 0;}
-.ab_hov {font-size: 1vw; text-align: center;}
+.ab_bott h1 {font-size: 1.3vw; font-weight: 500; text-align: center; padding-bottom: 15%;}
+.ab_bott > li {float: left; width: 23%; margin-right: 2%; border: 1px solid #ccc; padding: 3%; overflow: hidden;}
+.ab_bott > :last-child {margin-right: 0; position: relative;}
+.ab_nohov {width: 100%; position: absolute; left: 0; cursor: pointer; transition: all 1s ease;}
+
+.ab_nohov > img {width: 50%; position: absolute; left: 50%; transform: translateX(-50%);}
+.ab_hov {width: 100%; font-size: 1vw; text-align: center; position: absolute; left: 50%; transform: translateX(-50%); left: -100%; transition:all 1s ease;}
+
 .ab_hov > :first-child {margin-bottom: 3%; left: 100%;}
+.ab_txt {position: relative;}
