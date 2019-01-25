@@ -93,55 +93,84 @@
         </div>
     </section>
     <section id="portfolio" class="pages clear" data-now="2">
-        <div class="slide_wrap">
-            <div class="side_bar"></div>
-            <ul class="slides clear" id="slides">
-                <li class="slide" data-name="01">
-                    <div>
-                        <img src="../img/main/port/kellogg.png" class="img" alt="port_kelog"/>
-                        <h1 class="eng">KELLOGG's</h1>
-                        <div class="sli_txt">
-                            <div>
-                                <h2>반응형 웹페이지입니다.</h2>
-                                <h2>관리자페이지와 함께 봐주세요.</h2>
-                                <button class="go_site eng" onclick="window.open('../kellogg/kellogg.html');">renewer</butoon>
+        <div class="side_bar"></div>
+        <div class="wrap">
+            <ul class="ports">
+                <li>
+                    <div class="port_wrap">
+                        <div class="port">
+                            <div><img src="../img/main/port/kellogg.png" class="img" alt="port_kelog"/></div>
+                            <div class="sli_txt_wrap">
+                                <h1 class="eng">KELLOGG's</h1>
+                                <ul class="clear sli_txt">
+                                    <li>
+                                        <div class="eng">color:</div>
+                                        <div class="eng">Charles, Ray Eames</div>
+                                    </li>
+                                    <li>
+                                        <div class="eng">detail:</div>
+                                        <div>
+                                            반응형 웹페이지입니다. <br/>
+                                            관리자페이지와 함께 봐주세요.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="go_site" onclick="window.open('../kellogg/kellogg.html');">renewer</button>
                             </div>
                         </div>
                     </div>
-                    
                 </li>
-                <li class="slide" data-name="02">
-                    <div>
-                        <img src="../img/main/port/admin.png" class="img" alt="port_admin"/>
-                        <h1 class="eng">ADMIN</h1>
-                        <div class="sli_txt">
-                            <div>
-                                
-                                <h2>관리자 웹페이지입니다.</h2>
-                                <h2>켈로그페이지와 함께 봐주세요.</h2>
-                                <button class="go_site eng" onclick="window.open('../admin/admin.html');">renewer</button>
+                <li>
+                    <div class="port_wrap">
+                        <div class="port">
+                            <div><img src="../img/main/port/admin.png" class="img" alt="port_admin"/></div>
+                            <div class="sli_txt_wrap">
+                                <h1 class="eng">ADMIN</h1>
+                                <ul class="clear sli_txt">
+                                    <li>
+                                        <div class="eng">color:</div>
+                                        <div class="eng">Charles, Ray Eames</div>
+                                    </li>
+                                    <li>
+                                        <div class="eng">detail:</div>
+                                        <div>
+                                            관리자페이지입니다. <br/>
+                                            켈로그 웹페이지와 함께 봐주세요.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="go_site" onclick="window.open('../admin/admin.html');">renewer</button>
                             </div>
                         </div>
                     </div>
-                    
                 </li>
-                <li class="slide" data-name="03">
-                    <div>
-                        <img src="../img/main/port/foot.png" class="img" alt="port_foot"/>
-                        <h1 class="eng">THE FOOT SHOP</h1>
-                        <div class="sli_txt">
-                            <div>
-                                
-                                <h2>반응형 웹페이지입니다.</h2>
-                                <h2>스크롤에 따라 페이지가 넘어갑니다.</h2>
-                                <button class="go_site eng" onclick="window.open('../foot/foot.html');">renewer</button>
+                <li>
+                    <div class="port_wrap">
+                        <div class="port">
+                            <div><img src="../img/main/port/foot.png" class="img" alt="port_foot"/></div>
+                            <div class="sli_txt_wrap">
+                                <h1 class="eng">THE FOOT SHOP</h1>
+                                <ul class="clear sli_txt">
+                                    <li>
+                                        <div class="eng">color:</div>
+                                        <div class="eng">Charles, Ray Eames</div>
+                                    </li>
+                                    <li>
+                                        <div class="eng">detail:</div>
+                                        <div>
+                                            반응형 웹페이지입니다. <br/>
+                                          스크롤에 따라 페이지가 넘어갑니다.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="go_site" onclick="window.open('../foot/foot.html');">renewer</button>
                             </div>
                         </div>
                     </div>
-                    
                 </li>
-                <li class="slide" data-name="04">
-                    <div>
+                
+                <li>
+                     <div>
                         <video id="weather_wrap" autoplay loop muted>
                             <source class="dl_icon" src="../img/weather/01d.mp4" type="video/mp4" />
                         </video>
@@ -160,14 +189,12 @@
                             </div>
                         </div>
                     </div>
-                    
                 </li>
-            </ul>
-        </div>
-        <div class="pager_wrap">
-            <h1 class="pager"></h1>
-            <h1>/04</h1>
-        </div>
+            </ul>   
+        </div>   
+        <div id="port_lt"><i class="fa fa-angle-left"></i></div>
+		<div id="port_rt"><i class="fa fa-angle-right"></i></div>
+		<div id="port_pager"></div>
     </section>
     <section id="about" class="pages clear" data-now="3">
         <div class="wrap">

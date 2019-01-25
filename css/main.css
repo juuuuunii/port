@@ -88,7 +88,7 @@ header h1 {
    
 }
 header h1 > span {display: block; margin-bottom: -3%; font-size: 3vw; font-weight: 500;}
-.side_bar {
+header .side_bar {
     position: absolute;
     top: 0px;
     left: 650px;
@@ -99,7 +99,7 @@ header h1 > span {display: block; margin-bottom: -3%; font-size: 3vw; font-weigh
 }
 
 /*************** skills ****************/
-#skills {padding: 6% 0;}
+#skills {padding: 6% 0 3%;}
 #skills ul {padding: 5%;}
 #skills ul > li {float: left; width: 25%; text-align: center;}
 #skills ul > li > :first-child {padding-bottom: 10%; border-bottom: 1px solid #777;}
@@ -109,21 +109,49 @@ header h1 > span {display: block; margin-bottom: -3%; font-size: 3vw; font-weigh
 #skills ul > li p > span {color: #777; margin-bottom: 6%; display: block;}
 
 /*************** portfolio ****************/
-#portfolio {width: 100%; height: 60%;}
+#portfolio {
+    height:640px; 
+    position:relative;
+}
+#portfolio .side_bar {
+    position: absolute;
+    top: 0px;
+    left: 277px;
+    width: 1px;
+    height: 75%;
+    background-color: #8b8b8a;
+    z-index: 11;
+}
+#portfolio > :nth-child(2) {background-color:#b3b3b3; overflow: hidden;}
+.ports {width:100%; height: 100%; position:relative;}
+.ports > li {width:100%; height: 640px; position:absolute; animation-fill-mode:forwards; animation-timing-function:linear;}
+.ports .port_wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    color: #fff;
+    display: table;
+}
+.ports .port {display: table-cell; vertical-align: middle; padding: 0 5%;}
+.ports .port > :first-child {float:left; width:35%; margin-top: 6%; margin-right: 5%;}
+.ports .port > :last-child {float:left; width:55%;}
 
-.slide_wrap {width:100%; max-width:720px; min-height: 400px; position:relative; margin:20px auto; overflow:hidden;}
-.slides {width:100%; position:relative;}
 
-#slides .slide {width: 100%; position: absolute; z-index: 1;}
-#slides .slide > div {width: 100%; height: 100%;}
-#slides .slide img {width:100%;}
-#slides .slide:nth-child(1) {right:0; top:0;}
-#slides .slide:nth-child(2) {right:100%; top:0;}
-#slides .slide:nth-child(3) {right:200%; top:0;}
-#slides .slide:nth-child(4) {right:300%; top:0;}
-.pager_wrap {width: 60%; margin: 0 auto;}
-#slides .slide h1 {font-size: 2vw; color: #dd3055; position: absolute;  top: 18%; left: 50%; transform: translate(-50%, -18%); z-index: 2;}
-#slides .slide:nth-child(4) video {width: 100%; position: relative; z-index: 1;}
+.sli_txt_wrap h1 {font-size:2.5vw; letter-spacing:-2.5px;}
+.sli_txt_wrap > .sli_txt {font-size: .9vw; margin-bottom: 7%;}
+.sli_txt_wrap > .sli_txt > li {float:left;}
+.sli_txt_wrap > .sli_txt > :first-child {width:30%; margin-right: 5%;}
+.sli_txt_wrap > .sli_txt > :last-child {width:65%;}
+.sli_txt > li > :first-child {font-style:italic; border-bottom: 1px solid rgba(255,255,255, 0.2); margin-bottom: 3%;}
+.sli_txt_wrap > button {font-size: 1vw; padding: .5% 2%}
+#port_lt {font-size:4em; color:#b3b3b3; position: absolute; left:10%; top:50%; transform:translateY(-50%); opacity:.5; cursor:pointer;}
+#port_rt {font-size:4em; color:#b3b3b3; position: absolute; right:10%; top:50%; transform:translateY(-50%); opacity:.5; cursor:pointer;}
+#port_pager {font-size:1em; color:#fff; text-align:center; position:absolute; bottom:1rem; left:50%; transform: translateX(-50%);}
+#port_pager > i {opacity:.5; cursor:pointer; margin:0 0.5rem;}
+#port_lt:hover, #port_rt:hover, #port_pager > i:hover {opacity:1;}
+
+.ports > :nth-child(4) video {width: 100%; position: relative; z-index: 1;}
 .weather {width: 100%; position: absolute; top: 0; z-index: 10;}
 .weather > :first-child {color: #222; font-size: 1.2vw; text-align: center; font-weight: bold; padding: 10% 0 3.5%;}
 .daily{text-align: center;}
@@ -140,11 +168,17 @@ header h1 > span {display: block; margin-bottom: -3%; font-size: 3vw; font-weigh
 .wk_desc{font-size: 1.25em;  color: rgb(177, 177, 177);}
 #modal {z-index:9999; position: fixed;}
 
-.sli_txt {color: #fff; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .6); position: absolute; top: 0; left: 0; display: none;}
-.sli_txt > div {text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
- 
-.sli_txt > div h2 {margin-bottom: 3%;}
-.sli_txt > div a {font-size: 1.2vw; background-color: #fff; padding: 3% 8%;}
+@keyframes portAni {
+	0% {transform:scale(0.1); opacity:0;}
+	50% {transform:scale(0.3); opacity:1;}
+	100% {transform:scale(1); opacity:1;}
+}
+/*
+@media screen and (max-width:768px) {
+	.fban .wrap > :first-child {width:100%;}
+.fban .wrap > :last-child {width:100%;}
+}
+*/
 
 
 /*************** about ****************/

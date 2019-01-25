@@ -68,65 +68,87 @@ var pages = new WheelScroll({
 /*************** portfolio ****************/
 //silde
 $(window).resize(function(){
-	$(".slides").height($(".slide").height());
+	$(".ports").height($(".port_wrap").height());
 }).trigger("resize");
 
-var n = 1;
-var interval;
-var Num;
-var NumOld;
-$("#slides").find(".slide").each(function(){
-	Num = $(this).index();
-	var html = '<a onclick="paging(this);">'+Num+'</a>';
-	$(".pager").append(html);
-});
-interval = setInterval(slide, 2000);
-function slide() {
-	$("#slides").stop().animate({"right":-(n*100)+"%"}, 500, function(){
-		if(n == 4) {
-			n = 0;
-			$(this).css({"right":0});
+var portNum = 0;	//현재의 index
+var portLen = $(".ports > li").length - 1;	//마지막 index (예:5개라면 0,1,2,3,4 -> 4)
+var duration = 500;	//animate 속도
+$(window).resize(function(){
+	//본 작업을 진행하는 이유는 absolute 되어 있는 객체의 높이를 계산하기 위해서..
+	$(".ports").height($(".ports > li").eq(portNum).height() + 30);
+}).trigger("resize");
+//최초 한번 실행
+$(".ports > li").each(function(i){
+	$('<i class="fa-circle"></i>').appendTo("#port_pager").click(function(){
+		var iNum = $(this).index();
+		if(portNum < iNum) {
+			$(".ports > li").eq(portNum + 1).hide();
+			$(".ports > li").eq(iNum).show().css({"left":"100%"});
+			portNum = iNum;
+			portAni("-100%");
 		}
-		n++;
+		else if(portNum > iNum) {
+			$(".ports > li").eq(portNum - 1).hide();
+			$(".ports > li").eq(iNum).show().css({"left":"-100%"});
+			portNum = iNum;
+			portAni("100%");
+		}
 	});
-}
-function paging(obj) {
-	n = $(obj).index();
-	clearInterval(interval);
-	slide();
-	interval = setInterval(slide, 2000);
-}
-$("#slides").hover(function(){
-	clearInterval(interval);
-}, function(){
-	interval = setInterval(slide, 2000);
 });
-
-
-// slide_hover
-$(".slide").mouseenter(function() {
-    Num = $(this).index();
-	$(".sli_txt").eq(Num).css({"margin-top":"200px", "opacity":0, "display":"block"}).stop().animate({"margin-top":0, "opacity":1}, 600);
-	if(Num == 0, 1) {
-		$(".go_site").css({"color":"#dd3055"});
+portPos();
+function portAni(val) {
+	$(".ports > li").eq(portNum).css({"animation-name":"portAni", "animation-duration":duration*0.001+"s"});
+	$(".ports").stop().animate({"left":val}, duration, portPos);
+}
+function portPos() {
+	$(".ports").height($(".ports > li").eq(portNum).height() + 30);
+	
+	$(".ports > li").hide().css({"animation-name":""});
+	$(".ports").css({"left":0});
+	$(".ports > li").eq(portNum).show().css({"left":0});
+	if(portNum == 0) {
+		$(".ports > li").eq(portLen).show().css({"left":"-100%"});
+		$(".ports > li").eq(1).show().css({"left":"100%"});
 	}
-	else if(Num == 2) {
-		$(".go_site").css({"color":"#019751"});
+	else if(portNum == portLen) {
+		$(".ports > li").eq(portNum - 1).show().css({"left":"-100%"});
+		$(".ports > li").eq(0).show().css({"left":"100%"});
 	}
 	else {
-		$(".go_site").css({"color":"#3e7cce"});
-	}	
+		$(".ports > li").eq(portNum - 1).show().css({"left":"-100%"});
+		$(".ports > li").eq(portNum + 1).show().css({"left":"100%"});
+	}
+}
+$("#port_lt").click(function(){
+	if(portNum == portLen) portNum = 0;
+	else portNum++;
+	portAni("-100%");
+});
+$("#port_rt").click(function(){
+	if(portNum == 0) portNum = portLen;
+	else portNum--;
+	portAni("100%");
 });
 
-$(".slide").mouseleave(function() {
-    NumOld = Num
-    $(".sli_txt").eq(NumOld).stop().animate({"margin-top":"200px", "opacity":0}, 600, function () {
-		$(this).hide();
-	});
-});
 
 // go_site
 $(".go_site").mouseenter(function() {
+	NumOld = Num
+	$(this).css({"background-color":"#fff"});
+	if(NumOld == 0, 1) {
+		$(this).css({"color":"#dd3055"});
+	}
+	else if(NumOld == 2) {
+		$(this).css({"color":"#019751"});
+	}
+	else {
+		$(thus).css({"color":"#3e7cce"});
+	}
+});
+
+
+$(".go_site").mouseleave(function() {
 	Num = $(this).index();	
 	if(Num == 0, 1) {
 		$(this).css({"color":"#fff", "background-color":"#dd3055"});
@@ -138,20 +160,7 @@ $(".go_site").mouseenter(function() {
 		$(this).css({"color":"#fff", "background-color":"#3e7cce"});
 	}
 });
-
-$(".go_site").mouseleave(function() {
-	NumOld = Num
-	$(this).css({"background-color":"#fff"});
-	if(NumOld == 0, 1) {
-		$(this).css({"color":"#dd3055"});
-	}
-	else if(NumOld == 2) {
-		$(this).css({"color":"#019751"});
-	}
-	else {
-		$(thus).css({"color":"#3e7cce"});
-	}	
-});
+$(".go_site").eq(0).trigger("mouseleave");
 
 //weather
 $("#modal_open").click(function(){
