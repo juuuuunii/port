@@ -4,29 +4,21 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>이준희사이트</title>
-	<!-- css -->
+    <!-- css -->
+    <link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../css/main.css">
+    
+    <!-- w3 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<!-- chart -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>	
 </head>
 <body>
-    <!-- gnb -->
-    <div class="gnb clear">
-        <div class="logo">
-            <img src="../img/main/common/logo.png" class="img" alt="logo"/>
-        </div>
-        <ul class="nav clear">
-            <li class="eng">main</li>
-            <li class="eng">about</li>
-            <li class="eng">more</li>
-            <li class="eng">portfolio</li>
-        </ul>
-    </div>
+   
     <!-- 시작 -->
-    <header>
+    <header class="pages clear" data-now="0">
         <div class="side_bar"></div>
         <div>
             <h1>
@@ -36,71 +28,73 @@
             </h1>
         </div>
     </header>
-    <section id="skills">
+    <section id="skills" class="pages clear" data-now="1">
         <div class="wrap">
-            
-            <div class="fly_right">
-                <h1 class="eng">What i do</h1>
-                <p>i do those,</p>
+            <div class="fly_wrap">
+                <div class="fly_right">
+                    <h1 class="eng">What i do</h1>
+                    <p class="eng">i do those,</p>
+                </div>
             </div>
             <ul class="clear">
                 <li>
                     <div>
-                        <!--img src="../img/main/skills/photo.png" class="img" alt="photoshop"/-->
-                        <h1 class="eng">photoshop</h1>
+                        <img src="../img/main/skills/photo.png" class="img" alt="photoshop"/>
+                        <h3 class="eng">photoshop</h3>
                     </div>
                     <div>
-                         <h4>
+                         <p>
                             <span>책과 유투브를 통해</span>
                             <span>계속해서</span>
                             <span>공부하고 있습니다.</span>
-                        </h4>
+                        </p>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <!--img src="../img/main/skills/ill.png" class="img" alt="illustrator"/-->
-                        <h1 class="eng">illustrator</h1>
+                        <img src="../img/main/skills/ill.png" class="img" alt="illustrator"> 
+                        <h3 class="eng">illustrator</h3>
                     </div>
                     <div>
-                        <h4>
+                        <p>
                             <span>웹표준을 준수하며</span>
                             <span>하나의 웹사이트를</span>
                             <span>구현해 낼 수 있습니다.</span>
-                        </h4>
+                        </p>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <!--img src="../img/main/skills/html_css.png" class="img" alt="html_css"/-->
-                        <h1 class="eng">html & css</h1>
+                        <img src="../img/main/skills/html_css.png" class="img" alt="html_css"/>
+                        <h3 class="eng">html & css</h3>
                     </div>
                     <div>
-                        <h4>
+                        <p>
                             <span>웹표준을 준수하며</span>
                             <span>하나의 웹사이트를</span>
-                            <span>구현해 낼 수 있습니다.</span>
-                        </h4>
+                            <span>만들 수 있습니다.</span>
+                        </p>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <!--img src="../img/main/skills/java.png" class="img" alt="java"/-->
-                        <h1 class="eng">javascript</h1>
+                        <img src="../img/main/skills/java.png" class="img" alt="java"/>
+                        <h3 class="eng">javascript</h3>
                     </div>
                     <div>
-                        <h4>
+                        <p>
                             <span>웹사이트에 필요한</span>
                             <span>간단한 애니메이션을</span>
                             <span>구현해 낼 수 있습니다.</span>
-                        </h4>
+                        </p>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
-    <section id="portfolio">
+    <section id="portfolio" class="pages clear" data-now="2">
         <div class="slide_wrap">
+            <div class="side_bar"></div>
             <ul class="slides clear" id="slides">
                 <li class="slide" data-name="01">
                     <div>
@@ -110,7 +104,7 @@
                             <div>
                                 <h2>반응형 웹페이지입니다.</h2>
                                 <h2>관리자페이지와 함께 봐주세요.</h2>
-                                <a href="#" class="go_site">view</a>
+                                <button class="go_site eng" onclick="window.open('../kellogg/kellogg.html');">renewer</butoon>
                             </div>
                         </div>
                     </div>
@@ -125,7 +119,7 @@
                                 
                                 <h2>관리자 웹페이지입니다.</h2>
                                 <h2>켈로그페이지와 함께 봐주세요.</h2>
-                                <a href="#" class="go_site">view</a>
+                                <button class="go_site eng" onclick="window.open('../admin/admin.html');">renewer</button>
                             </div>
                         </div>
                     </div>
@@ -140,7 +134,7 @@
                                 
                                 <h2>반응형 웹페이지입니다.</h2>
                                 <h2>스크롤에 따라 페이지가 넘어갑니다.</h2>
-                                <a href="#" class="go_site">view</a>
+                                <button class="go_site eng" onclick="window.open('../foot/foot.html');">renewer</button>
                             </div>
                         </div>
                     </div>
@@ -148,17 +142,25 @@
                 </li>
                 <li class="slide" data-name="04">
                     <div>
-                        <img src="../img/main/port/foot.png" class="img" alt="port_foot"/>
-                        <h1>THE FOOT SHOP</h1>
-                        <div class="sli_txt">
-                            <div>
-                                
-                                <h2>반응형 웹페이지입니다.</h2>
-                                <h2>스크롤에 따라 페이지가 넘어갑니다.</h2>
-                                <a href="#" class="go_site">view</a>
+                        <video id="weather_wrap" autoplay loop muted>
+                            <source class="dl_icon" src="../img/weather/01d.mp4" type="video/mp4" />
+                        </video>
+                        <div class="weather clear">					 
+                            <h2 id="bt_daily">오늘의 날씨</h2>
+                            <div class="daily">
+                                <div>
+                                    <div class="dl_area">
+                                        <span>[ 서울 ]</span> 
+                                        <button id="modal_open" class="modal_bt">도시선택</button>
+                                    </div>
+                                    <div class="dl_date"></div>
+                                    <div class="dl_temp"></div>
+                                    <div class="dl_desc"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </li>
             </ul>
         </div>
@@ -167,79 +169,119 @@
             <h1>/04</h1>
         </div>
     </section>
-    <section id="about">
+    <section id="about" class="pages clear" data-now="3">
         <div class="wrap">
-            <div class="fly_right">
-                <h1 class="eng">Who am i</h1>
-                <p>i create a more positive future.</p>
+            <div class="fly_wrap">
+                <div class="fly_right">
+                    <h1 class="eng">Who am i</h1>
+                    <p class="eng">i create a more positive future.</p>
+                </div>
             </div>
             <ul class="clear ab_top">
                 <li>
-                    <h3>major</h3>
-                    <h1>국어국문학과에서 새롭게 시작했습니다.</h1>
+                    <h4 class="eng">major</h>
+                    <h3>국어국문학과에서 새롭게 시작했습니다.</h3>
                     <p>국어국문학과에서 새롭게 시작했습니다.</p>
                 </li>
                 <li>
-                    <h3>future</h3>
-                    <h1>되고싶습니다.</h1>
+                    <h4 class="eng">future</h4>
+                    <h3>되고싶습니다.</h3>
                     <p>되고싶습니다.</p>
                 </li>
             </ul>
-            <ul class="clear ab_bott">
+
+            <ul class="ab_list">
                 <li>
-                    <div></div>
-                    <div class="ab_txt">
-                        <h1>birth</h1>
-                        <div class="ab_nohov">
-                            <img src="../img/main/who/birth.png" class="img" alt="birth"/>
-                        </div>
-                        <div class="ab_hov">
-                            <p>햅 삐 해 피</p>
-                            <p>94년생 04월 (26세)</p>
+                    <img src="../img/main/who/top_birth.jpg" class="img" alt="birth"/>
+                    <div class="txt_area">
+                        <b class="eng">birth</b>
+                        <div class="hover_area">
+                            <p>
+                                햅 삐 해 피<br />
+                                94년 4월 (26세)
+                            </p>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div></div>
-                    <div class="ab_txt">
-                        <h1>mobile</h1>
-                        <div class="ab_nohov">
-                            <img src="../img/main/who/phone.png" class="img" alt="phone"/>
-                        </div>
-                        <div class="ab_hov">
-                            <p>010.7172.0722</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div class="ab_txt">
-                        <h1>mail</h1>
-                        <div class="ab_nohov">
-                            <img src="../img/main/who/mail.png" class="img" alt="mail"/>
-                        </div>
-                        <div class="ab_hov">
-                            <p>01071720722s@gmail.com</p>
+                    <img src="../img/main/who/top_phone.jpg" class="img" alt="phone"/>
+                    <div class="txt_area">
+                        <b class="eng">moblie</b>
+                        <div class="hover_area">
+                            <p>
+                                010. 7172. 0722
+                            </p>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div></div>
-                    <div class="ab_txt">
-                        <h1>home</h1>
-                        <div class="ab_nohov">
-                            <img src="../img/main/who/home.png" class="img" alt="home"/>
+                    <img src="../img/main/who/top_mail.jpg" class="img" alt="mail"/>
+                    <div class="txt_area">
+                        <b class="eng">mail</b>
+                        <div class="hover_area">
+                            <p>
+                                01071720722s@gmail.com
+                            </p>
                         </div>
-                        <div class="ab_hov">
-                            <p>인천시 계양구 효성동</p>
-                            <p>인천 1호선 작전역</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="../img/main/who/top_home.jpg" class="img" alt="home"/>
+                    <div class="txt_area">
+                        <b class="eng">home</b>
+                        <div class="hover_area">
+                            <p>
+                                인천시 계양구 효성동<br />
+                                인천 1호선 작전역
+                            </p>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
+    <footer>
+        <ul class="clear">
+            <li class="eng">
+                <h3>juuuuunii</h3>
+                <p>Copyright, juuuuunii. All rights reserved.</p>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="../img/main/common/github-logo.png" class="img" alt="github"/>
+                </a>
+            </li>
+        </ul>
+    </footer>
+     <!-- gnb -->
+    <div class="gnb">
+        <div class="logo">
+            <img src="../img/main/common/logo.png" class="img" alt="logo"/>
+        </div>
+        <ul class="nav">
+            <li class="eng nav_bt" data-now="0">main</li>
+            <li class="eng nav_bt" data-now="1">skills</li>
+            <li class="eng nav_bt" data-now="2">portfolio</li>
+            <li class="eng nav_bt" data-now="3">introduce</li>
+        </ul>
+    </div>
+    <!-- weather modal. 시작 -->
+    <div id="modal" class="w3-modal">
+        <div class="w3-modal-content">
 
+            <header class="w3-container">
+                <span id="modal_close" class="w3-button w3-display-topright">&times;</span>
+                <h2>도시선택</h2>
+            </header>
+
+            <div class="w3-container" style="padding:2rem">
+                <div class="selects">
+                    <select id="area" class="w3-input"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- weather modal. 종료 -->
     <!-- js -->
     <script src="../js/main.js"></script>
 </body>

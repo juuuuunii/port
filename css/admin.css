@@ -1,0 +1,62 @@
+/*************** 초기화 ****************/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+html, body {margin: 0; padding: 0; font-size:14px; color:#222; box-sizing: border-box; font-family:'Noto Sans KR', sans-serif; height:100%; font-weight:300;}
+h1, h2, h3, h4, h5, h6, p, span  {margin: 0; padding: 0; font-weight: 300;}
+div, ul, li, ol, dl, dd, dt{margin: 0; padding: 0; box-sizing: border-box; list-style: none;}
+table {margin:0; padding:0; border-collapse:collapse;}
+th, td {margin:0; padding:0;}
+
+a {text-decoration:none; color: inherit;}
+
+.hand {cursor:pointer;}
+.clear {clear:both;}
+.clear:after {clear:both; content:""; display: block;}
+.img {width:100%;}
+.hover:hover {opacity:0.8;}
+.bold {font-weight: 500;}
+.eng {font-family: 'Montserrat', sans-serif;}
+.wrap {width: 100%; height: 100%;}
+
+/*************** admin ****************/
+.header {width: 100%; padding: 1.5% 0;}
+.header > :first-child {text-align: center;}
+.header > :last-child {position: absolute; top: 4%; right: 10%; color: #fff;}
+.header > :last-child > button {font-weight: 600; color: #222; background-color: #fff;}
+.header > :last-child > :last-child {color: #c80136;}
+.header > :last-child > button:hover {text-decoration: underline;}
+.logo {max-width: 150px; margin-top: 8px;}
+.nav_lists {width: 100%; text-align: center;}
+.nav_list {width: 25%; float: left; font-size: 1.5rem; font-weight: 600; color: #555; padding: 1rem; cursor: pointer;}
+.nav_list:hover {background-color: #c80136; color: #fff;}
+
+.width {width: 1260px; margin: 0 auto; padding: 20px;}
+.section {width: 100%; min-height: calc(100% - 201px); display: none;}
+.section .title{font-size: 1.2em; font-weight: 700; color: #222; padding: 2% 0;}
+.list {margin: 12px;}
+.list > li {border: 1px solid #ccc; text-align: center; padding: 1.5rem;}
+.img_li {width: 30%; float: left;}
+.nav_li {width: 65%; float: right;}
+.list img {height: 60px; margin-bottom: 8px; border: 1px solid #ccc;}
+.btn {background-color: #1f3950; color: #fff; margin-top: 1.5rem;}
+
+.list > li > :first-child {border:4px solid #ccc; padding: 8px;}
+#brand_wrap .nav_li > div {width: 49%; float: left;}
+#brand_wrap .nav_li > div > :first-child {border:4px solid #ccc; padding: 8px;}
+#brand_wrap .nav_li > :first-child {border:0;}
+#brand_wrap .nav_li > :last-child {float: right; padding: 8px;}
+
+#event_wrap .nav_li > div {width: 49%; float: left;}
+#event_wrap .nav_li > div > :first-child {border:4px solid #ccc; padding: 8px;}
+#event_wrap .nav_li > :first-child {border:0;}
+#event_wrap .nav_li > :last-child {float: right; padding: 8px;}
+
+.img_cont {margin: 15px;}
+.img_cont > :first-child, .nav_cont > :first-child {margin-top: 50px;}
+.add_list {border: 1px solid #ccc; text-align: center; padding: 1.5rem; margin-bottom: 15px;}
+.add_img {margin: 0;}
+.add_nav {border: 1px solid #ccc; padding: 2%; margin-bottom: 15px;}
+
+.footer {width: 100%; height: 50px; background-color: #222; text-align: center;  line-height:50px; color: #f1f1f1;}
